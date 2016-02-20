@@ -1,0 +1,64 @@
+[hub]
+  protocol = https
+[user]
+  name = <name>
+  email = <email>
+[apply]
+  # Detect whitespace errors when applying a patch
+  whitespace = fix
+[core]
+  # Treat spaces before tabs and all kinds of trailing whitespace as an error.
+  # [default] trailing-space: looks for spaces at the end of a line
+  # [default] space-before-tab: looks for spaces before tabs at the beginning of
+  # a line
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+  # Make `git rebase` safer on OS X
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+  # Set editor to $EDITOR
+  editor = <editor>
+  excludesfile = ~/.gitignore
+[color]
+  # Use colors in Git commands that are capable of colored output when
+  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[merge]
+  # Include summaries of merged commits in newly created merge commit messages
+  log = true
+[push]
+  # setting to git 2.0 default
+  default = simple
+[fetch]
+  prune = true
+[alias]
+  db = !sh -c 'git branch -D $1' -
+  drb = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
+  cb = !sh -c 'git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  su = !sh -c 'git checkout $1 && git branch --set-upstream-to=origin/$1' -
+  gui = !sh -c '/usr/local/Cellar/git/2.0.0/libexec/git-core/git-gui'
+[commit]
+  # Load template for commit message
+  template = ~/.gitmessage
+[pull]
+  rebase = true
+[advice]
+  statusHints = false
+[diff]
+  mnemonicprefix = true
+[rerere]
+  enabled = 1
+[gui]
+  diffcontext = 20
