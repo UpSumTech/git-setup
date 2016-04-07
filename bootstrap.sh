@@ -30,7 +30,7 @@ main() {
   build
 
   sed -i.bak -e "s#<name>#$name#g;s#<email>#$email#g;s#<editor>#$EDITOR#g" "$HOME/.gitconfig"
-  rm "$HOME/.gitignore.bak"
+  [[ -f "$HOME/.gitconfig.bak" ]] && rm "$HOME/.gitconfig.bak"
 }
 
 main "$@"
