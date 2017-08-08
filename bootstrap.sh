@@ -8,7 +8,7 @@ prep() {
 
 cloneRepo() {
   rm -rf "$LIB_DIR/git-setup" >/dev/null 2>&1 # Careful with this command
-  git clone "git@github.com:sumanmukherjee03/git-setup.git" "$LIB_DIR/git-setup"
+  git clone "https://github.com/sumanmukherjee03/git-setup.git" "$LIB_DIR/git-setup"
 }
 
 build() {
