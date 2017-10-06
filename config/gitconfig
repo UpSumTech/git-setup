@@ -49,6 +49,9 @@
   cb = !sh -c 'git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   su = !sh -c 'git checkout $1 && git branch --set-upstream-to=origin/$1' -
   gui = !sh -c '/usr/local/Cellar/git/2.0.0/libexec/git-core/git-gui'
+  lg = log --graph --all --decorate --show-notes=*
+  psu = !sh -c 'git pull --rebase --prune $@ && git submodule update --init --recursive'
+  pn = !sh -c 'git push origin refs/notes/*'
 [commit]
   # Load template for commit message
   template = ~/.gitmessage
@@ -62,3 +65,7 @@
   enabled = 1
 [gui]
   diffcontext = 20
+[help]
+  autocorrect = 1
+[remote "origin"]
+  fetch = +refs/notes/*:refs/notes/*
