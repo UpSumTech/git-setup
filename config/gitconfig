@@ -16,7 +16,7 @@
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
   # Set editor to $EDITOR
-  editor = <editor>
+  editor = vim
   excludesfile = ~/.gitignore
 [color]
   # Use colors in Git commands that are capable of colored output when
