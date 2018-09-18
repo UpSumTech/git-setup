@@ -52,6 +52,7 @@
   lg = log --graph --all --decorate --show-notes=*
   psu = !sh -c 'git pull --rebase --prune $@ && git submodule update --init --recursive'
   pn = !sh -c 'git push origin refs/notes/*'
+  cnb = !sh -c 'git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 [commit]
   # Load template for commit message
   template = ~/.gitmessage
