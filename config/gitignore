@@ -3,6 +3,8 @@
 *.log
 tags
 cscope
+cscope.*
+cscope/**/*
 tmp/**/*
 !tmp/cache/.keep
 *.bak
