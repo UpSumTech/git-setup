@@ -2,6 +2,7 @@
 *.sw[nop]
 *.log
 tags
+cscope
 tmp/**/*
 !tmp/cache/.keep
 *.bak
