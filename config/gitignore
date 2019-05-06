@@ -23,3 +23,4 @@ node_modules/**/*
 *.make
 .ensime
 ensime.sbt
+.ensime_cache/**/*
