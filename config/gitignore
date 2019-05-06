@@ -21,3 +21,5 @@ node_modules/**/*
 *.tar.gz
 *.bundle
 *.make
+.ensime
+ensime.sbt
